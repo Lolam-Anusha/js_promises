@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const fetchUsers = new Promise((res)=>{
+            setTimeout(()=>{
+                res("Users")
+            },5000)
+        })
+        const fetchPosts = new Promise((res)=>{
+            setTimeout(()=>{
+                res("Posts")
+            },5000)
+        })
+        const fetchComments = new Promise((res)=>{
+            setTimeout(()=>{
+                res("comments")
+            },5000)
+        })
+        Promise.all([fetchUsers, fetchPosts, fetchComments]).then((res)=>{console.log(res)}).catch((e)=>{console.log(e)})
+    </script>
+</body>
+</html>

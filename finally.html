@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const promise = new Promise((resolve,reject)=>{
+            const data = false;
+            if(data) resolve({id:1, name:"karunakar"})
+            else reject("data not found")
+        })
+        promise.then((res)=>{
+            console.log(res)
+        })
+        promise.catch((rej)=>{
+            console.log(rej) //data not found
+        })
+        promise.finally(()=>{
+            console.log("done")  //done
+        })
+        promise.finally((final)=>{
+            console.log("done",final) //done, undefined--bcz it does not need any parameters to be passed, without them it will get executed
+        })
+    </script>
+</body>
+</html>

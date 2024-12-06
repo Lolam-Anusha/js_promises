@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const promise = new Promise((resolve,reject)=>{
+            const data = true;
+            if(data) resolve({id:1,name:"karunakar"});
+            else reject("error")
+        })
+        promise.then((res)=>{
+            console.log(res)
+        })
+        promise.then((a)=>{
+            console.log(a.name)
+        })
+    </script>
+</body>
+</html>
